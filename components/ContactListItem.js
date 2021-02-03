@@ -23,14 +23,14 @@ export default function ContactListItem({name, phone, onPress}){
 }
 const styles = StyleSheet.create({
     container:{
-       flex:1 
+       flex:1,
+       paddingLeft:24, 
     },
     contacInfo: {
         flexDirection: "row",
         paddingVertical:16,
-        paddingHorizontal:24,
-        backgroundColor: colors.secondry,
-        borderBottomColor: 'gray',
+        paddingHorizontal:24, 
+        borderBottomColor: 'colors.secondary',
         borderBottomWidth: 0.5
     
     },

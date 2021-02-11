@@ -1,28 +1,22 @@
 import React from 'react';
-import {
-    View,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    StyleSheet
-} from 'react-native';
+import { StyleSheet, View, TextInput,Text, TouchableOpacity} from 'react-native';
 import Colors from '../utils/colors';
 export default function CreateContact(){
-    return (
-        <View  style={styles.formContainer}>
-           <TextInput placeholder="Name" style={styles.input} />
-           <TextInput placeholder="Email" keyboardType="email-address" style={styles.input} />
-           <TextInput placeholder="Phone" keyboardType="numeric" style={styles.input} />
-           <TouchableOpacity style={[styles.button,{backgroundColor:Colors.primary}]}>
-               <Text style={styles.buttonTxt}>Save</Text>
-           </TouchableOpacity>
-           <TouchableOpacity style={[styles.button,{backgroundColor:'red'}]}>
-               <Text style={styles.buttonTxt}>Cancel</Text>
-           </TouchableOpacity>
+    return(
+        <View style={styles.fromContainer}>
+            <TextInput  placeholder="Name" style={styles.input}/>
+            <TextInput  placeholder="Email" KeyboardType="email"  style={styles.input}/>
+            <TextInput  placeholder="phone" KeyboardType="numeric"  style={styles.input}/>
+            <TouchableOpacity style={[styles.button,{backgroundColor:Colorsprimary}]}>
+                <Text style={styles.buttonTxt}>Sava</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={[styles.button,{backgroundColor:'red'}]}>
+                <Text style={styles.buttonTxt}>Cancel</Text>
+            </TouchableOpacity>
         </View>
     )
-
 }
+
 const styles =StyleSheet.create({
     formContainer:{
         borderRadius:30,

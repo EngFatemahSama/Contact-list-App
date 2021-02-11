@@ -8,9 +8,9 @@ import * as SQLite from "expo-sqlite";
 const Stack = createStackNavigator();
 const db = SQLite.openDatabase('mobileApp.db');     
 import Contacts from "./screens/Contacts";
-import Profile from "./screens/profile";
-import CreateContacts from "./screens/createContacts";     
-import SearchScreen from './screens/searchScreen';
+import Profile from "./screens/Profile"
+import CreateContacts from "./screens/CreateContacts";     
+import SearchScreen from './screens/SearchScreen';
 export default function App() {
   useEffect(()=>{
      db.transaction(tx=>{
@@ -24,16 +24,16 @@ export default function App() {
            <Stack.Screen name="Contacts" component={Contacts}
             options={({navigation})=>({
               headerRight:()=>(   
-                <TouchableOpacity style={{paddingRight:20}} onPress={()=> navigation.navigate('Sreach')}>
+                <TouchableOpacity style={{paddingRight:20}} onPress={()=> navigation.navigate('Search')}>
                   <Text>
-                    <MaterialIcons name="search" size={24} color="black"/>
+                  <MaterialIcons name="search" size={24} color="black"/>
                   </Text>   
                 </TouchableOpacity>
               )
             })} />
            <Stack.Screen name="CreateContact" component={CreateContacts} />
            <Stack.Screen name="Profile" component={Profile} />
-           <Stack.Screen name="Sreach" component={SearchScreen} />
+           <Stack.Screen name="Search" component={SearchScreen} />
         </Stack.Navigator>   
       </NavigationContainer>
     </View>

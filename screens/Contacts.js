@@ -4,7 +4,7 @@ import { StyleSheet, View,
   } from 'react-native';
 
   import Colors from '../utils/colors';
-  import ContactListItem from '../components/contactListItem';
+  import ContactListItem from '../components/ContactListItem';
   import {Feather} from "@expo/vector-icons";
 
   const contacts =[
@@ -26,7 +26,7 @@ import { StyleSheet, View,
            data={contacts}
            keyExtractor={(item)=>{item.id}}
            renderItem={({item})=>{
-             return <ContactListItem name={item.name} phone={item.phone} onPress={()=> navigation.navigate('profile',{item:item})}/>
+             return <ContactListItem name={item.name} phone={item.phone} onPress={()=> navigation.navigate('Profile',{item:item})}/>
            }}
            />
            <TouchableOpacity style={styles.floatButton}  onPress={()=> navigation.navigate('CreateContact')}>
